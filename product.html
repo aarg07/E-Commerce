@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            background: #f4f4f4
+        }
+        
+        .slider {
+            position: relative;
+            width: 500%;
+            height: 5%;
+            max-width: 200px;
+            margin: 100px;
+            overflow:visible;
+            border-radius: 10px;
+
+        }
+        
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .slide {
+            min-width: 200%;
+            box-sizing: border-box;
+            position: relative;
+        }
+        
+        .slide img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .caption {
+            background: rgba(170, 158, 158, 0.5);
+            color: rgb(161, 144, 144);
+            padding: 8px;
+            text-align: center;
+        }
+        
+        span2 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-5000%);
+            background: rgba(111, 97, 97, 0.8);
+            border: none;
+            padding: 1px;
+            cursor: pointer;
+        }
+
+
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1px 10px;
+            gap: 5px;
+            background-color: #181717;
+            outline: 3px #181717 solid;
+            outline-offset: -3px;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            margin: 1px;
+            margin-left: 140px;
+            transition: 400ms;
+          }
+          
+          .button .text {
+            color: rgb(240, 238, 238);
+            font-weight: 70;
+            font-size: 1em;
+            transition: 400ms;
+          }
+          
+          .button svg path {
+            transition: 400ms;
+          }
+          
+          .button:hover {
+            background-color: transparent;
+          }
+          
+          .button:hover .text {
+            color: #181717;
+          }
+          
+          .button:hover svg path {
+            fill: #181717;
+          }
+        
+
+
+        
+        .out {
+            left: 10px;
+        }
+        
+        .in {
+            right: 10px;
+        }
+    
+
+
+
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="Images/apple.png" alt="Apple Airpods Max" height="500">
+                <div class="caption">
+                    <h2>Apple Airpods Max</h2>
+                    <p>&#8377 58,999</p>
+                    <button class="button">
+                        <svg viewBox="0 0 16 16" class="bi bi-cart-check" height="24" width="24" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+                         <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"></path>
+                         <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+                       </svg>
+                         <p class="text">Add to Cart</p>
+
+
+
+                </div>
+            </div>
+            <div class="slide">
+                <img src="Images/spny.png" alt="Sony Headphones"  height="500">
+                <div class="caption">
+                    <h2>Sony Headphones</h2>
+                    <p>&#8377 3,899</p>
+                    <button class="button">
+                        <svg viewBox="0 0 16 16" class="bi bi-cart-check" height="24" width="24" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+                         <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"></path>
+                         <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+                       </svg>
+                         <p class="text">Add to Cart</p>
+
+                </div>
+            </div>
+            <div class="slide">
+                <img src="Images/jbl.png" alt="JBL Headphones" height="500">
+                <div class="caption">
+                    <h2>JBL Headphones</h2>
+                    <p>&#8377 15,999</p>
+                    <button class="button">
+                        <svg viewBox="0 0 16 16" class="bi bi-cart-check" height="24" width="24" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+                         <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"></path>
+                         <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+                       </svg>
+                         <p class="text">Add to Cart</p>
+
+                </div>
+            </div>
+            <div class="slide">
+                <img src="Images/charger.jpg" alt="Charger" height="500">
+                <div class="caption">
+                    <h2>Charger</h2>
+                    <p>&#8377 1,199</p>
+                    <button class="button">
+                        <svg viewBox="0 0 16 16" class="bi bi-cart-check" height="24" width="24" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+                         <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"></path>
+                         <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+                       </svg>
+                         <p class="text">Add to Cart</p>
+
+                </div>
+            </div>
+          
+ 
+            
+            <div class="slide">
+                <img src="Images/galaxy.png" alt="Galaxy Samsung Buds " height="500">
+                <div class="caption">
+                    <h2>Galaxy Samsung Buds </h2>
+                    <p>&#8377 18,999</p>
+                    <button class="button">
+                        <svg viewBox="0 0 16 16" class="bi bi-cart-check" height="24" width="24" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+                         <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"></path>
+                         <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+                       </svg>
+                         <p class="text">Add to Cart</p>
+
+                </div>
+            </div>
+        </div>
+        <span2 class="out" onclick="changeSlide(-1)">&#10094;</span2>
+        <span2 class="in" onclick="changeSlide(1)">&#10095;</span2>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides1.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            const offset = -currentSlide * 100;
+            document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+        }
+        
+        function changeSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+        
+        // Automatic slide change every 5 seconds
+        setInterval(() => {
+            changeSlide(1);
+        }, 3000);
+        
+        // Optionally pause on hover
+        const slider = document.querySelector('.slider');
+        slider.addEventListener('mouseover', () => clearInterval(autoSlide));
+        slider.addEventListener('mouseout', () => {
+            autoSlide = setInterval(() => changeSlide(1), 3000);
+        });
+        
+        // Initialize automatic sliding
+        let autoSlide = setInterval(() => changeSlide(1), 3000);
+        
+    </script>
+</body>
+</html>

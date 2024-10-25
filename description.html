@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Description</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .product {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .product-image {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        .product-details {
+            flex: 1;
+        }
+        
+        .product-details h2 {
+            margin-top: 0;
+        }
+        
+        .product-details ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        
+        .buy-button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .buy-button:hover {
+            background-color: #218838;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nothing Phone(2a)</h1>
+        </header>
+        <div class="product">
+            <img src="nothing.png" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2>Description</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.</p>
+                
+                <h3>Price: &#8377 20,999 </h3>
+                <h3>Features:</h3>
+                <ul>
+                    <li>Feature 1</li>
+                    <li>Feature 2</li>
+                    <li>Feature 3</li>
+                </ul>
+
+                <button class="buy-button">Buy Now</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
